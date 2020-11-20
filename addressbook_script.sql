@@ -49,3 +49,24 @@ from addressbook
 where city='Anatapur'
 order by first_name asc;
 
+
+ALTER TABLE `addressbookdb`.`addressbook` 
+ADD COLUMN `type` VARCHAR(45) NULL AFTER `email`,
+ADD COLUMN `name` VARCHAR(45) NULL AFTER `type`;
+
+
+UPDATE `addressbookdb`.`addressbook` SET `name` = 'AddressBook1', `type` = 'Friend' WHERE (`id` = '1');
+UPDATE `addressbookdb`.`addressbook` SET `name` = 'AddressBook1', `type` = 'Family' WHERE (`id` = '2');
+UPDATE `addressbookdb`.`addressbook` SET `name` = 'AddressBook1', `type` = 'Proffesion' WHERE (`id` = '3');
+UPDATE `addressbookdb`.`addressbook` SET `name` = 'AddressBook2', `type` = 'Friend' WHERE (`id` = '4');
+
+INSERT INTO `addressbookdb`.`addressbook` ( `name`, `type`, `first_name`, `last_name`, `address`, `city`, `state`, `zip`, `phone_number`, `email`)
+ VALUES ( 'AddressBook2', 'Friend', 'Ramesh', 'Vatti', 'Gorantla', 'Pune', 'Gurarat', '515235', '9876543210', 'ramesh@gmail.com');
+INSERT INTO `addressbookdb`.`addressbook` ( `name`, `type`, `first_name`, `last_name`, `address`, `city`, `state`, `zip`, `phone_number`, `email`)
+ VALUES ( 'AddressBook3', 'Family', 'Naresh', 'Vatti', 'Gorantla', 'Chennai', 'Tamilnadu', '515237', '9876543212', 'naresh@gmail.com');
+INSERT INTO `addressbookdb`.`addressbook` ( `name`, `type`, `first_name`, `last_name`, `address`, `city`, `state`, `zip`, `phone_number`, `email`)
+ VALUES ( 'AddressBook3', 'Family', 'Lokesh', 'Vatti', 'Gorantla', 'Chennai', 'Tamilnadu', '515238', '9876543213', 'lokesh@gmail.com');
+
+
+
+
