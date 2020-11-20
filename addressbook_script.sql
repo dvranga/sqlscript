@@ -67,6 +67,21 @@ INSERT INTO `addressbookdb`.`addressbook` ( `name`, `type`, `first_name`, `last_
 INSERT INTO `addressbookdb`.`addressbook` ( `name`, `type`, `first_name`, `last_name`, `address`, `city`, `state`, `zip`, `phone_number`, `email`)
  VALUES ( 'AddressBook3', 'Family', 'Lokesh', 'Vatti', 'Gorantla', 'Chennai', 'Tamilnadu', '515238', '9876543213', 'lokesh@gmail.com');
 
+select count(type),type
+from addressbook
+group by type;
 
+select count(type),name
+from addressbook
+group by name;
+
+select count(type)
+from addressbook;
+
+
+INSERT INTO `addressbookdb`.`addressbook` ( `name`, `type`, `first_name`, `last_name`, `address`, `city`, `state`, `zip`, `phone_number`, `email`)
+ VALUES ( 'AddressBook1', 'Friend', 'Geethesh', 'Vatti', 'Gorantla', 'Chennai', 'Tamilnadu', '515238', '9876543213', 'lokesh@gmail.com');
+INSERT INTO `addressbookdb`.`addressbook` ( `name`, `type`, `first_name`, `last_name`, `address`, `city`, `state`, `zip`, `phone_number`, `email`)
+ VALUES ( 'AddressBook2', 'Family', 'Geethesh', 'Vatti', 'Gorantla', 'Chennai', 'Tamilnadu', '515238', '9876543213', 'lokesh@gmail.com');
 
 
