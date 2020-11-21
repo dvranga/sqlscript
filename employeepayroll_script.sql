@@ -41,3 +41,29 @@ select *
 from employee_payroll
 where start between cast('2018-01-01' as date) and date(now());
 
+alter table employee_payroll add phone_number varchar(250)
+after name;
+alter table employee_payroll add address varchar(250)
+after phone_number;
+alter table employee_payroll add department varchar(250)
+not null
+after address;
+
+alter table employee_payroll rename column salary to basic_pay;
+
+alter table employee_payroll add deductions double not null after basic_pay;
+
+alter table employee_payroll add taxable_pay double not null after deductions;
+
+alter table employee_payroll add tax double not null after taxable_pay;
+
+alter table employee_payroll add net_pay double not null after tax;
+
+
+
+
+
+
+
+
+
